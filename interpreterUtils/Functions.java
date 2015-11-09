@@ -260,14 +260,12 @@ public class Functions {
 					// bound the parameters
 					
 					p = s;
+					HashMap<String, String> aList = new HashMap<String, String>(params);
 					for(String param: Interpreter.param.get(function)){
-						params.put(param, p.left.value);
+						aList.put(param, p.left.value);
 						p = p.right;
 					}
-				
-					s.value = Interpreter.eval(Interpreter.bodyMap.get(function), params);
-					// need to remove here?
-					
+					s.value = Interpreter.eval(Interpreter.bodyMap.get(function), aList);
 				}
 				else{
 					System.out.println("Error: Invlaid function name :" + function);

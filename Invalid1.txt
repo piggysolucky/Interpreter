@@ -1,3 +1,2 @@
 
-(DEFUN.(F.((X.(Y.NIL)).((MINUS.(X.(Y.NIL))).NIL))))
-(F.(5.(4.NIL)))
+(DEFUN.(F.((X.(Y.NIL)).((PLUS.(X.(Y.NIL))).NIL))))
