@@ -7,6 +7,7 @@ import classProject.interpreterModules.Atom;
 import classProject.interpreterModules.SNode;
 import classProject.interpreterModules.Token;
 
+
 /**
  * construct the binary tree and compute the n.list value for each node*/
 public class Parcer {
@@ -36,18 +37,18 @@ public class Parcer {
 		}else if(Atom.isAtom(token)){ //Create a node and return the node
 			return new SNode(token);
 		}else if(token.equals(Token.ERROR)){
-			System.out.println("Parcer.java: Invalid atom in input !");
+			System.out.println("ERROR: line 111 in Interpreter.java: Invalid atom in input !");
 			System.exit(0);
 		}else if(!token.equals(Token.OpenParenthesis)){
-			System.out.println("Parcer.java: Missing open parenthesis !");
-			return null;//System.exit(0);
+			System.out.println("ERROR: line 114 in Interpreter.java: Missing open parenthesis !");
+			System.exit(0);
 		}else if(token.equals(Token.OpenParenthesis)){
 			left = ParseSexp();
 		}
 		
 		String middle = MyScanner.getNextToken();
 		if(!middle.equals(Token.Dot)){
-			System.out.println("Parcer.java: Missing Dot !");
+			System.out.println("ERROR: line 122 in Interpreter.java: Missing Dot !");
 			System.exit(0);
 		}
 		SNode root = new SNode(middle);
@@ -68,7 +69,7 @@ public class Parcer {
 		}
 		String close = MyScanner.getNextToken();
 		if(!close.equals(Token.ClosingParenthesis)){
-			System.out.println("Parcer.java: Missing Closing Paranthesis !");
+			System.out.println("ERROR: line 143 in Interpreter.java: Missing Closing Paranthesis !");
 			System.exit(0);
 		}
 		return root;

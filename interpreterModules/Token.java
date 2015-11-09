@@ -14,9 +14,7 @@ public class Token {
 	public static final String ERROR = "Not Valid Input!";
 	public static final String End = "End of file !";
 	public static final String NIL = "NIL";
-	
-	public static Set<String> primitive = new HashSet<>(Arrays.asList(".","T", "NIL", "CAR", "CDR", "CONS", "ATOM", "EQ","NULL", "INT", "PLUS", "MINUS"
-			, "TIMES", "QUOTIENT", "REMAINDER", "LESS", "GREATER", "COND", "QUOTE"));
-	public static Set<String> unary = new HashSet<>(Arrays.asList("CAR","CDR","ATOM", "NULL", "INT"));
-	public static Set<String> binary = new HashSet<>(Arrays.asList("PLUS", "MINUS", "TIMES", "QUOTIENT", "REMAINDER", "LESS", "GREATER"));
+	public static Set<String> arith = new HashSet<>(Arrays.asList("PLUS", "MINUS", "TIMES", "QUOTIENT", "REMAINDER", "LESS", "GREATER"));
+	public static Set<String> buildIn = new HashSet<>(Arrays.asList("CAR", "CDR", "CONS", "ATOM", "EQ", "NULL", "INT", "PLUS", "MINUS",
+			"TIMES", "QUOTIENT", "REMAINDER", "LESS", "GREATER", "COND", "QUOTE", "DEFUN"));
 }

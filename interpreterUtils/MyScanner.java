@@ -46,7 +46,7 @@ public class MyScanner {
 					 prev = character;
 					 String token = stringBuffer.toString();
 					 
-					 if(Functions.isInt(token) || Token.primitive.contains(token)){
+					 if(Atom.isAtom(token)){
 						 return token;
 					 }else {
 						 return Token.ERROR;

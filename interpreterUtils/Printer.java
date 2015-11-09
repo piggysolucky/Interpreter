@@ -1,10 +1,9 @@
 package classProject.interpreterUtils;
 
-import classProject.interpreterModules.Atom;
+import java.util.List;
+
 import classProject.interpreterModules.SNode;
 import classProject.interpreterModules.Token;
-
-import java.util.List;
 
 public class Printer {
 	public static void print(List<SNode> list){
