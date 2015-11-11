@@ -1,2 +1,3 @@
-
 (DEFUN.(F.((X.(Y.NIL)).((PLUS.(X.(Y.NIL))).NIL))))
+(DEFUN.(G.((X.(Y.NIL)).((MINUS.(X.(Y.NIL))).NIL))))
+(F.((G.(4.((G.(4.(1.NIL))).NIL))).(9.NIL)))

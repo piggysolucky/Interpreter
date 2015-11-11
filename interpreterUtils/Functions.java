@@ -244,6 +244,7 @@ public class Functions {
 						s.value = less(a, b);
 					} 
 				}
+				
 				// user defined functions
 				else if(Interpreter.param.containsKey(function)){
 					//validate the parameters
@@ -262,10 +263,12 @@ public class Functions {
 					p = s;
 					HashMap<String, String> aList = new HashMap<String, String>(params);
 					for(String param: Interpreter.param.get(function)){
+						//System.out.println(p.left.value);
 						aList.put(param, p.left.value);
 						p = p.right;
 					}
-					s.value = Interpreter.eval(Interpreter.bodyMap.get(function), aList);
+					SNode root = SNode.copyTree(Interpreter.bodyMap.get(function));
+					s.value = Interpreter.eval(root, aList);
 				}
 				else{
 					System.out.println("Error: Invlaid function name :" + function);
@@ -273,7 +276,7 @@ public class Functions {
 				}
 				return s.value;
 	}
-	
+		
 	//PLUS
 		public static String plus(int a, int b){
 			int result = a+b;
